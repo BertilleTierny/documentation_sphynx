@@ -12,27 +12,27 @@ jobs:
       contents: write
 
 
-  steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v3
-      with:
-        python-version: "3.12"
+    steps:
+      - uses: actions/checkout@v3     #Clone le repository
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.12"
 
 
-    - name: Install dependencies
-      run: |
-        pip install -e .
-        pip install sphinx furo
+      - name: Install dependencies 
+        run: |
+          pip install -e .
+          pip install sphinx furo
 
-    - name: Sphinx build
-      run: |
-        sphinx-apidoc -o source sphynxy --separate
-        sphinx-build source build/html
+      - name: Sphinx build
+        run: |
+          sphinx-apidoc -o source sphynxy --separate
+          sphinx-build source build/html
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        publish_branch: gh-pages
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: build/html
-        force_orphan: true
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/html
+          force_orphan: true
