@@ -26,7 +26,6 @@ jobs:
 
       - name: Sphinx build
         run: |
-          sphinx-apidoc -o source sphynxy --separate
           sphinx-build source build/html
 
       - name: Deploy
