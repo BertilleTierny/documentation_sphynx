@@ -39,5 +39,5 @@ jobs:
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: sphynx_documentation/build
+          publish_dir: sphynx_documentation/build/v0.0.1
           force_orphan: true
