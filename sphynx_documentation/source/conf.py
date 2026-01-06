@@ -16,7 +16,7 @@ author = 'B'
 extensions = ['sphinxcontrib.matlab', 'sphinx.ext.autodoc', 'sphinx.ext.napoleon',  'sphinx_multiversion']
 primary_domain = "mat"
 
-matlab_src_dir = r'C:\Projets\Interne\MAIF\vscode_demo' 
+matlab_src_dir = r'C:\Projets\Interne\MAIF\Documentation_Git_Versioning\documentation_sphynx\demo_code' 
 
 templates_path = ['_templates']
 exclude_patterns = []
