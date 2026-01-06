@@ -32,7 +32,7 @@ jobs:
       - name: Sphinx build
         run: |
           rm -rf sphynx_documentation/build
-          sphinx-build -W --keep-going sphynx_documentation/source sphynx_documentation/build
+          sphinx-multiversion -W --keep-going sphynx_documentation/source sphynx_documentation/build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
