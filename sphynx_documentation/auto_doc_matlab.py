@@ -198,7 +198,7 @@ def print_structure(structure: dict, indent: int = 0) -> None:
 if __name__ == "__main__":
 
     # Chemin vers le dossier racine du code MATLAB à documenter
-    code_path = r"C:\Projets\Interne\MAIF\Documentation_Git_Versioning\documentation_sphynx\demo_code" 
+    code_path = r"C:\Projets\Interne\MAIF\Documentation_Git_Versioning\documentation_sphynx\code_matlab" 
 
     # Chemin vers le dossier où enregistrer le fichier RST généré
     output_path = r"C:\Projets\Interne\MAIF\Documentation_Git_Versioning\documentation_sphynx\sphynx_documentation\source\documentation_hierarchique.rst"
