@@ -21,7 +21,7 @@ jobs:
 
       - name: Install dependencies 
         run: |
-          pip install backports.tarfile==1.2.0 importlib-metadata==8.0.0 jaraco.collections==5.1.0 platformdirs==4.2.2 tomli==2.0.1 sphinx-autobuild==2025.8.25
+          pip install backports.tarfile==1.2.0 importlib-metadata==8.0.0 jaraco.collections==5.1.0 platformdirs==4.2.2 tomli==2.0.1 sphinx-autobuild==2025.8.25 sphinx-multiversion==0.2.4 sphinx-rtd-theme==3.0.2
     
 
       - name: Sphinx build
