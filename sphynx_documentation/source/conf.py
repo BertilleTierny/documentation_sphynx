@@ -1,3 +1,4 @@
+import os
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -16,7 +17,8 @@ author = 'B'
 extensions = ['sphinxcontrib.matlab', 'sphinx.ext.autodoc', 'sphinx.ext.napoleon',  'sphinx_multiversion']
 primary_domain = "mat"
 
-matlab_src_dir = r'C:\Projets\Interne\MAIF\Documentation_Git_Versioning\documentation_sphynx\code_matlab' 
+matlab_src_dir = os.path.abspath('C:/Projets/Interne/MAIF/Documentation_Git_Versioning/documentation_sphynx/code_matlab')
+# matlab_src_dir = r'C:\Projets\Interne\MAIF\Documentation_Git_Versioning\documentation_sphynx\code_matlab' 
 
 templates_path = ['_templates']
 exclude_patterns = []
