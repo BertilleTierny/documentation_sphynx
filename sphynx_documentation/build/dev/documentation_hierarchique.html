@@ -1,0 +1,346 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>demo_code &mdash; Documentation Documentation du Code </title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d1a510d7"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=e6b791cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="prev" title="Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Documentation du Code
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation Technique</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">demo_code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">functions</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Documentation du Code</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">demo_code</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/documentation_hierarchique.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="demo-code">
+<h1>demo_code<a class="headerlink" href="#demo-code" title="Lien vers cette rubrique"></a></h1>
+<dl class="mat script" id="module-demo_code">
+<dt class="sig sig-object mat" id="demo_code.main">
+<span class="sig-prename descclassname"><span class="pre">demo_code.</span></span><span class="sig-name descname"><span class="pre">main</span></span><a class="headerlink" href="#demo_code.main" title="Lien vers cette définition"></a></dt>
+<dd><p>ILLUSTRATION DES FONCTIONNALITÉS MATLAB DANS VSCODE</p>
+</dd></dl>
+
+<section id="functions">
+<h2>functions<a class="headerlink" href="#functions" title="Lien vers cette rubrique"></a></h2>
+<dl class="mat function" id="module-demo_code.functions">
+<dt class="sig sig-object mat" id="demo_code.functions.analyser_temperature">
+<span class="sig-prename descclassname"><span class="pre">demo_code.functions.</span></span><span class="sig-name descname"><span class="pre">analyser_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">temperatures</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.analyser_temperature" title="Lien vers cette définition"></a></dt>
+<dd><p>ANALYSER_TEMPERATURE Analyse et classification des températures.</p>
+<p>Calcule des statistiques descriptives sur un vecteur de températures
+(en °C) et classifie les éléments selon trois catégories: froid (&lt;10°C),
+tempéré (10–25°C) et chaud (≥25°C). La sortie regroupe les statistiques
+globales et la répartition par catégorie.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>temperatures</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span> <span class="pre">(N×1</span> <span class="pre">ou</span> <span class="pre">1×N)</span></code></span>) – Vecteur de températures en degrés Celsius.
+Les valeurs doivent être finies et réelles.</p>
+</dd>
+<dt class="field-even">Returns resultat<span class="colon">:</span></dt>
+<dd class="field-even"><p>Structure d’analyse contenant statistiques et classification.</p>
+</dd>
+<dt class="field-odd">Rtype resultat<span class="colon">:</span></dt>
+<dd class="field-odd"><p>struct avec champs
+.statistiques      (voir <cite>statistiques_data</cite>)
+.classification.froid
+.classification.tempere
+.classification.chaud
+.classification.pourcentage_chaud</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><cite>statistiques_data</cite></p>
+</div>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="demo_code.functions.statistiques_data">
+<span class="sig-prename descclassname"><span class="pre">demo_code.functions.</span></span><span class="sig-name descname"><span class="pre">statistiques_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.statistiques_data" title="Lien vers cette définition"></a></dt>
+<dd><p>STATISTIQUES_DATA Statistiques descriptives pour un vecteur numérique.</p>
+<p>Calcule les mesures de tendance centrale et de dispersion pour un
+vecteur de valeurs numériques: moyenne, médiane, écart-type, minimum,
+maximum, étendue et nombre d’éléments. Retourne une structure regroupant
+ces indicateurs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span> <span class="pre">(N×1</span> <span class="pre">ou</span> <span class="pre">1×N)</span></code></span>) – Vecteur de données numériques à analyser.
+Doit être un vecteur réel, non vide, avec valeurs finies.</p>
+</dd>
+<dt class="field-even">Returns stats<span class="colon">:</span></dt>
+<dd class="field-even"><p>Structure contenant les statistiques calculées.</p>
+</dd>
+<dt class="field-odd">Rtype stats<span class="colon">:</span></dt>
+<dd class="field-odd"><p>struct avec champs
+.moyenne, .mediane, .ecart_type, .minimum,
+.maximum, .etendue, .nombre_elements</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Exemple:</dt><dd><p>data = [5, 15, 28, 12, 30, 8, 22];
+stats = statistiques_data(data);
+fprintf(“Moyenne: %.2fn”, stats.moyenne);</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat class">
+<dt class="sig sig-object mat" id="demo_code.functions.TestStatistiquesData">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">demo_code.functions.</span></span><span class="sig-name descname"><span class="pre">TestStatistiquesData</span></span><a class="headerlink" href="#demo_code.functions.TestStatistiquesData" title="Lien vers cette définition"></a></dt>
+<dd><p>TESTSTATISTIQUESDATA Suite de tests pour <cite>statistiques_data</cite>.</p>
+<p>Valide la structure de sortie et l’exactitude des mesures
+statistiques calculées par la fonction <cite>statistiques_data</cite> avec
+différents cas (vecteurs ligne/colonne, valeurs négatives,
+décimales, un seul élément, consistance, exemple documentation).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span> <span class="pre">(N×1</span> <span class="pre">ou</span> <span class="pre">1×N)</span></code></span>) – Données utilisées dans les tests (chaque méthode définit son jeu).</p>
+</dd>
+<dt class="field-even">Renvoie<span class="colon">:</span></dt>
+<dd class="field-even"><p>Aucune sortie (classe de tests unitaires).</p>
+</dd>
+<dt class="field-odd">Type renvoyé<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>matlab.unittest.TestCase</cite></p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><cite>statistiques_data</cite>, <cite>matlab.unittest</cite></p>
+</div>
+<div class="members docutils container">
+<dl>
+<dt>Method Summary</dt><dd><dl class="mat method">
+<dt class="sig sig-object mat" id="demo_code.functions.TestStatistiquesData.setupTest">
+<span class="sig-name descname"><span class="pre">setupTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">testCase</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.TestStatistiquesData.setupTest" title="Lien vers cette définition"></a></dt>
+<dd><p>Vérifier que la fonction statistiques_data existe</p>
+</dd></dl>
+
+<dl class="mat method">
+<dt class="sig sig-object mat" id="demo_code.functions.TestStatistiquesData.testCalculsStatistiques">
+<span class="sig-name descname"><span class="pre">testCalculsStatistiques</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">testCase</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.TestStatistiquesData.testCalculsStatistiques" title="Lien vers cette définition"></a></dt>
+<dd><p>Test des calculs statistiques avec des données connues</p>
+</dd></dl>
+
+<dl class="mat method">
+<dt class="sig sig-object mat" id="demo_code.functions.TestStatistiquesData.testConsistance">
+<span class="sig-name descname"><span class="pre">testConsistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">testCase</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.TestStatistiquesData.testConsistance" title="Lien vers cette définition"></a></dt>
+<dd><p>Test de consistance : appels multiples avec mêmes données</p>
+</dd></dl>
+
+<dl class="mat method">
+<dt class="sig sig-object mat" id="demo_code.functions.TestStatistiquesData.testExempleDocumentation">
+<span class="sig-name descname"><span class="pre">testExempleDocumentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">testCase</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.TestStatistiquesData.testExempleDocumentation" title="Lien vers cette définition"></a></dt>
+<dd><p>Test avec l’exemple donné dans la documentation</p>
+</dd></dl>
+
+<dl class="mat method">
+<dt class="sig sig-object mat" id="demo_code.functions.TestStatistiquesData.testStructureSortie">
+<span class="sig-name descname"><span class="pre">testStructureSortie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">testCase</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.TestStatistiquesData.testStructureSortie" title="Lien vers cette définition"></a></dt>
+<dd><p>Test que la fonction retourne une structure avec tous les champs requis</p>
+</dd></dl>
+
+<dl class="mat method">
+<dt class="sig sig-object mat" id="demo_code.functions.TestStatistiquesData.testTypesSortie">
+<span class="sig-name descname"><span class="pre">testTypesSortie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">testCase</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.TestStatistiquesData.testTypesSortie" title="Lien vers cette définition"></a></dt>
+<dd><p>Test des types de données en sortie</p>
+</dd></dl>
+
+<dl class="mat method">
+<dt class="sig sig-object mat" id="demo_code.functions.TestStatistiquesData.testUnSeulElement">
+<span class="sig-name descname"><span class="pre">testUnSeulElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">testCase</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.TestStatistiquesData.testUnSeulElement" title="Lien vers cette définition"></a></dt>
+<dd><p>Test avec un seul élément</p>
+</dd></dl>
+
+<dl class="mat method">
+<dt class="sig sig-object mat" id="demo_code.functions.TestStatistiquesData.testValeursDecimales">
+<span class="sig-name descname"><span class="pre">testValeursDecimales</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">testCase</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.TestStatistiquesData.testValeursDecimales" title="Lien vers cette définition"></a></dt>
+<dd><p>Test avec des nombres décimaux</p>
+</dd></dl>
+
+<dl class="mat method">
+<dt class="sig sig-object mat" id="demo_code.functions.TestStatistiquesData.testValeursNegatives">
+<span class="sig-name descname"><span class="pre">testValeursNegatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">testCase</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.TestStatistiquesData.testValeursNegatives" title="Lien vers cette définition"></a></dt>
+<dd><p>Test avec des valeurs négatives</p>
+</dd></dl>
+
+<dl class="mat method">
+<dt class="sig sig-object mat" id="demo_code.functions.TestStatistiquesData.testVecteurColonne">
+<span class="sig-name descname"><span class="pre">testVecteurColonne</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">testCase</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.TestStatistiquesData.testVecteurColonne" title="Lien vers cette définition"></a></dt>
+<dd><p>Test avec un vecteur colonne</p>
+</dd></dl>
+
+<dl class="mat method">
+<dt class="sig sig-object mat" id="demo_code.functions.TestStatistiquesData.testVecteurLigne">
+<span class="sig-name descname"><span class="pre">testVecteurLigne</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">testCase</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.TestStatistiquesData.testVecteurLigne" title="Lien vers cette définition"></a></dt>
+<dd><p>Test avec un vecteur ligne</p>
+</dd></dl>
+
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="demo_code.functions.visualiser_donnees">
+<span class="sig-prename descclassname"><span class="pre">demo_code.functions.</span></span><span class="sig-name descname"><span class="pre">visualiser_donnees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data</span></em>, <em class="sig-param"><span class="pre">titre</span></em><span class="sig-paren">)</span><a class="headerlink" href="#demo_code.functions.visualiser_donnees" title="Lien vers cette définition"></a></dt>
+<dd><p>VISUALISER_DONNEES Visualisations d’un vecteur de données.</p>
+<p>Affiche une figure avec quatre sous-graphes: histogramme, boxplot,
+courbe d’évolution (index en abscisse) et statistiques textuelles.
+Le titre de la fenêtre est optionnel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span> <span class="pre">(N×1</span> <span class="pre">ou</span> <span class="pre">1×N)</span></code></span>) – Vecteur de valeurs numériques à visualiser. Les valeurs
+doivent être finies (sans NaN/Inf).</p></li>
+<li><p><strong>titre</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">char|string</span></code></span>) – Titre de la figure (optionnel). Valeur par défaut:
+“Visualisation des données”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie<span class="colon">:</span></dt>
+<dd class="field-even"><p>Aucune sortie. Crée une figure avec quatre sous-graphes.</p>
+</dd>
+<dt class="field-odd">Type renvoyé<span class="colon">:</span></dt>
+<dd class="field-odd"><p>void</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Exemple:</dt><dd><p>data = randn(100,1);
+visualiser_donnees(data, “Données simulées”);</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><cite>statistiques_data</cite></p>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="index.html" class="btn btn-neutral float-left" title="Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, B.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Other Versions</span>
+    v: dev
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Tags</dt>
+      <dd><a href="../v0.0.1/documentation_hierarchique.html">v0.0.1</a></dd>
+    </dl>
+    <dl>
+      <dt>Branches</dt>
+      <dd><a href="documentation_hierarchique.html">dev</a></dd>
+    </dl>
+  </div></div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+   
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Other Versions</span>
+    v: dev
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Tags</dt>
+      <dd><a href="../v0.0.1/documentation_hierarchique.html">v0.0.1</a></dd>
+    </dl>
+    <dl>
+      <dt>Branches</dt>
+      <dd><a href="documentation_hierarchique.html">dev</a></dd>
+    </dl>
+  </div></div>
+
+
+</body>
+</html>

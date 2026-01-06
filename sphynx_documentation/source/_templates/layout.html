@@ -1,0 +1,8 @@
+{# source/_templates/layout.html #}
+{% extends "!layout.html" %}
+
+{# Surcharge le bloc 'footer' pour y inclure le sélecteur de version #}
+{% block footer %}
+  {{ super() }}
+  {% include "versions.html" %}
+{% endblock %}
