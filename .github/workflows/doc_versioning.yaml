@@ -34,6 +34,15 @@ jobs:
         run: |
           sphinx-multiversion sphynx_documentation/source sphynx_documentation/build
 
+      - name: Debug build output
+        run: |
+          echo "=== Tags disponibles ==="
+          git tag
+          echo "=== Contenu du build ==="
+          ls -la sphynx_documentation/build/
+          echo "=== Branches ==="
+          git branch -a
+      
       - name: Create redirect to latest tag
         run: |
           LATEST_TAG=$(git tag --sort=-v:refname | head -n 1)
