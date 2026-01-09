@@ -34,13 +34,13 @@ html_css_files = ['custom.css']
 language = 'fr'
 
 #versioning avec sphinx
-smv_tag_whitelist = r'^\d+\.\d+.*$|latest'  # all tags of form *.*.x and latest
+smv_tag_whitelist =   r'^v\d+\.\d+.*$|latest' #r'^\d+\.\d+.*$|latest'  # all tags of form *.*.x and latest
 
 # Whitelist pattern for branches (set to '' to ignore all branches)
 smv_branch_whitelist =  r'^.*$'  # all branches
 # smv_branch_whitelist =  r'^(master)$' # 
 smv_released_pattern = r'^tags/.*$'
-smv_latest_version = '0.0.1'
+smv_latest_version = 'v0.0.1'
 smv_remote_whitelist = r'^origin$'
 
 
