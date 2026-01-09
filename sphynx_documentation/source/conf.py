@@ -33,11 +33,16 @@ html_static_path = ['_static']
 html_css_files = ['custom.css']
 language = 'fr'
 
+# Context for sphinx-multiversion
+html_context = {
+    'current_version': 'latest',
+    'versions': [('latest', '/')],
+}
 #versioning avec sphinx
 smv_tag_whitelist = r'^\d+\.\d+.*$|latest'  # all tags of form *.*.x and latest
 
 # Whitelist pattern for branches (set to '' to ignore all branches)
-smv_branch_whitelist =  r'^.*$'  # all branches
+# smv_branch_whitelist =  r'^.*$'  # all branches
 # smv_branch_whitelist =  r'^(master)$' # 
 smv_released_pattern = r'^tags/.*$'
 smv_latest_version = '0.0.1'
