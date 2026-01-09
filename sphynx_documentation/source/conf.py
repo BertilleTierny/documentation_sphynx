@@ -44,6 +44,7 @@ smv_tag_whitelist = r'^\d+\.\d+.*$|latest'  # all tags of form *.*.x and latest
 # Whitelist pattern for branches (set to '' to ignore all branches)
 # smv_branch_whitelist =  r'^.*$'  # all branches
 # smv_branch_whitelist =  r'^(master)$' # 
+smv_branch_whitelist = r'^$'  # Aucune branche
 smv_released_pattern = r'^tags/.*$'
 smv_latest_version = '0.0.1'
 smv_remote_whitelist = r'^origin$'
