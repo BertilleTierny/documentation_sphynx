@@ -46,9 +46,12 @@ jobs:
       - name: Create redirect to latest tag
         run: |
           LATEST_TAG=$(git tag --sort=-v:refname | head -n 1)
-          echo "Latest tag: $LATEST_TAG"
-          echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=${LATEST_TAG}/index.html\"></head></html>" > sphynx_documentation/build/v0.0.1/index.html
-
+          if [ -z "$LATEST_TAG" ]; then
+            LATEST_TAG="main"
+          fi
+          echo "Redirect vers: $LATEST_TAG"
+          echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=${LATEST_TAG}/index.html\"></head></html>" > sphynx_documentation/build/index.html
+      
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
