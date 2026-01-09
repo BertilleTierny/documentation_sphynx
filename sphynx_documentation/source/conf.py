@@ -8,8 +8,8 @@ import os
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Documentation du Code'
-copyright = '2025, B'
-author = 'B'
+copyright = '2025, MAIF'
+author = 'MAIF'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

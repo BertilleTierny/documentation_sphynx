@@ -1,0 +1,49 @@
+name: Publish Versioned Documentation
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*.*.*'  # Déclenche aussi sur les nouveaux tags
+
+jobs:
+  publish_sphinx_docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Fetch all branches and tags
+        run: |
+          git fetch --all --tags
+
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies 
+        run: |
+          pip install backports.tarfile==1.2.0 importlib-metadata==8.0.0 jaraco.collections==5.1.0 platformdirs==4.2.2 tomli==2.0.1 sphinx-autobuild==2025.8.25 sphinx-multiversion==0.2.4 sphinx-rtd-theme==3.0.2
+
+      - name: Sphinx multiversion build
+        run: |
+          sphinx-multiversion sphinx_documentation/source sphinx_documentation/build
+
+      - name: Create redirect to latest tag
+        run: |
+          LATEST_TAG=$(git tag --sort=-v:refname | head -n 1)
+          echo "Latest tag: $LATEST_TAG"
+          echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=${LATEST_TAG}/index.html\"></head></html>" > sphinx_documentation/build/index.html
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: sphinx_documentation/build
+          force_orphan: true
